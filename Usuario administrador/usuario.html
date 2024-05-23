@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maatenedor usuarios - Super Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/usuario.css">
+</head>
+
+<body>
+    <div id="menu"></div>
+    <div id="navbar"></div>
+    <script src="menu_superior.html"></script>
+
+    <div class="container-registro">
+        <h1 id="registrarme_titulo">
+            <strong>Mantenedor de usuarios</strong>
+        </h1>
+
+        <!-- Formulario de registro de cliente -->
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <!-- Campos del formulario -->
+                    <div class="col-sm-12 col-md-4">
+
+                        <!-- Campo ID -->
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">
+                                <strong>ID</strong>
+                            </label>
+                            <input required placeholder="" type="text" class="form-control" id="rut" name="rut"
+                                aria-describedby="rutHelp">
+
+                            <!-- Campo Cliente/Administrador -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check mb-2 mt-3">
+                                        <input class="form-check-input" type="radio" name="tipoUsuario"
+                                            id="clienteRadio" value="cliente" checked>
+                                        <label class="form-check-label" for="clienteRadio">
+                                            Cliente
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check mb-2 mt-3">
+                                        <input class="form-check-input" type="radio" name="tipoUsuario" id="adminRadio"
+                                            value="administrador">
+                                        <label class="form-check-label" for="adminRadio">
+                                            Administrador
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campo Rut -->
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">
+                                <strong>Rut</strong>
+                            </label>
+                            <input required placeholder="Ej: 11123123-K" type="text" class="form-control" id="rut"
+                                name="rut" aria-describedby="rutHelp">
+                            <div id="rutHelp" class="form-text">
+                                Escribe el RUT sin puntos y con guión.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo RUT es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">
+                                <strong>Nombres</strong>
+                            </label>
+                            <input required placeholder="Ej: Juan" type="text" class="form-control" id="nombre"
+                                name="nombre" aria-describedby="nombreHelp">
+                            <div id="nombreHelp" class="form-text">
+                                Escribe los nombres del usuario.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Nombres es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Apellido -->
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">
+                                <strong>Apellidos</strong>
+                            </label>
+                            <input required placeholder="Ej: González" type="text" class="form-control" id="apellido"
+                                name="apellido" aria-describedby="apellidoHelp">
+                            <div id="apellidoHelp" class="form-text">
+                                Escribe los apellidos del usuario.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Apellidos es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Correo -->
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">
+                                <strong>Correo</strong>
+                            </label>
+                            <input required placeholder="Ej: jgonzalez@gmail.com" type="email" class="form-control"
+                                id="correo" name="correo" aria-describedby="correoHelp">
+                            <div id="correoHelp" class="form-text">
+                                Escribe el correo del usuario.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Correo es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Dirección -->
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">
+                                <strong>Dirección</strong>
+                            </label>
+                            <textarea required placeholder="Ej: Calle San Pedro 425, La Florida" class="form-control"
+                                rows="3" id="direccion" name="direccion" aria-describedby="direccionHelp"></textarea>
+                            <div id="direccionHelp" class="form-text">
+                                Escribe la dirección del usuario.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo dirección es obligatorio.
+                            </div>
+                        </div>
+
+                        <!-- Campo Subscrito -->
+                        <div class="mb-3">
+                            <label for="subscrito" class="form-label">
+                                <strong>Con suscripción</strong>
+                            </label>
+                            <input type="checkbox" id="subscrito" name="subscrito">
+                            <div id="subscritoHelp" class="form-text">
+                                Deseo subscribirme con un aporte de $1.500 mensuales
+                                y obtener un 5% de descuento en mis compras.
+                            </div>
+                        </div>
+
+                        <!-- Campo Contraseña -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
+                                <strong>Contraseña</strong>
+                            </label>
+                            <input type="password" required placeholder="Escribe aquí tu contraseña"
+                                class="form-control" id="password" name="password" aria-describedby="passwordHelp">
+                            <div id="passwordHelp" class="form-text">
+                                <button id="btn-generar-contrasena" class="btn btn-sm btn-custom-btn">Generar
+                                    contraseña</button>
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo password es obligatorio
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Foto de perfil -->
+                    <div class="col-sm-12 col-md-4">
+                        <img class="registro_foto" src="img/predeterminado.jfif" alt="">
+                        <br><br>
+                        <input type="file" class="btn btn-ptimary">
+                    </div>
+                </div>
+                <!-- Botonera -->
+                <div class="row">
+                    <div class="col text-center">
+                        <button id="btn-generar-contrasena" type="button"
+                            class="btn btn-sm custom-btn">Guardar</button></a>
+                        <button id="btn-generar-contrasena" type="buttom" class="btn btn-sm custom-btn">Nuevo</button>
+                        <button id="btn-generar-contrasena" type="buttom"
+                            class="btn btn-sm custom-btn">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--Registro de clientes-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla Responsive</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Tipo usuario</th>
+                                    <th scope="col">RUT</th>
+                                    <th scope="col">Nombres</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Con suscripcion</th>
+                                    <th scope="col">Imagen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>9043</td>
+                                    <td>Cliente</td>
+                                    <td>21656789-0</td>
+                                    <td>Juan</td>
+                                    <td>Zamora</td>
+                                    <td>jzamo@gmail.com</td>
+                                    <td>Moneda 989, Santiago</td>
+                                    <td>Si</td>
+                                    <td>?</td>
+                                </tr>
+                                <tr>
+                                    <td>6758</td>
+                                    <td>Administrador</td>
+                                    <td>9456786-0</td>
+                                    <td>Pablo</td>
+                                    <td>Silva</td>
+                                    <td>pabloss@gmail.com</td>
+                                    <td>Lo Prado 876, Pudahuel</td>
+                                    <td>Si</td>
+                                    <td>?</td>
+                                </tr>
+                                <tr>
+                                    <td>1343</td>
+                                    <td>Cliente</td>
+                                    <td>17665879-K</td>
+                                    <td>Daniel</td>
+                                    <td>Barrera</td>
+                                    <td>danibar@gmail.co,m</td>
+                                    <td>San Pablo 908, C. Navia</td>
+                                    <td>No</td>
+                                    <td>?</td>
+                                </tr>
+                                <tr>
+                                    <td>9070</td>
+                                    <td>Cliente</td>
+                                    <td>18765349-7</td>
+                                    <td>Camila</td>
+                                    <td>Leiva</td>
+                                    <td>camileiva3@icloud.com</td>
+                                    <td>Av. Apoquindo 34, Las Condes</td>
+                                    <td>No</td>
+                                    <td>?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Función para cargar dinámicamente el footer desde footer.html
+        function includeFooter() {
+            // Crear un objeto XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            // Definir qué hacer cuando el contenido de footer.html se cargue correctamente
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Insertar el contenido del footer en el placeholder
+                    document.getElementById("footer-placeholder").innerHTML = this.responseText;
+                }
+            };
+
+            // Cargar el contenido de footer.html
+            xhttp.open("GET", "footer.html", true);
+            xhttp.send();
+        }
+
+        // Llamar a la función para cargar el footer
+        includeFooter();
+    </script>
+
+</body>
+
+</html>

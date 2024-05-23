@@ -1,0 +1,5 @@
+ /* Estilo de letras rojas para errores en el formulario */
+.error {
+    color: red;
+    font-weight: bolder;
+}

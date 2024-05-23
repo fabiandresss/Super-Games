@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/faviconsg.png">
+    <title>Mis Datos - Super Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha384-gibbZQgXFjOHJV8Vf6X0jPWfR0VcLy0zN6bjq0oeU9MCQ86kIQBhf8Wh0kZ5MIth" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="menu"></div>
+    <div id="navbar"></div>
+    <script src="menu_superior.html"></script>
+
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">
+            <strong>Registrarme</strong>
+        </h1>
+
+        <!-- Formulario de registro de cliente -->
+        <form id="formulario-registro" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="rut" class="form-label">
+                        <strong>Rut</strong>
+                    </label>
+                    <input required placeholder="Ej: 11123123-K" type="text" class="form-control" id="rut" name="rut"
+                        aria-describedby="rutHelp">
+                    <div id="rutHelp" class="form-text">
+                        Escribe el RUT sin puntos y con guión.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo RUT es obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">
+                        <strong>Nombre</strong>
+                    </label>
+                    <input required placeholder="Ej: Juan" type="text" class="form-control" id="nombre"
+                        name="nombre" aria-describedby="nombreHelp">
+                    <div id="nombreHelp" class="form-text" value = "">
+                        Escribe tu nombre.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">
+                        <strong>Apellido</strong>
+                    </label>
+                    <input required placeholder="Ej: González" type="text" class="form-control"
+                        id="apellido" name="apellido" aria-describedby="apellidoHelp">
+                    <div id="apellidoHelp" class="form-text" value = "">
+                        Escribe tu apellido.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo Apellido es obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">
+                        <strong>Correo</strong>
+                    </label>
+                    <input required placeholder="Ej: jgonzalez@gmail.com" type="email" class="form-control" id="correo"
+                        name="correo" aria-describedby="correoHelp">
+                    <div id="correoHelp" class="form-text">
+                        Escribe tu correo.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo Correo es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">
+                        <strong>Dirección</strong>
+                    </label>
+                    <textarea required placeholder="Ej: Calle San Pedro 425, La Florida" class="form-control" rows="3"
+                        id="direccion" name="direccion" aria-describedby="direccionHelp"></textarea>
+                    <div id="direccionHelp" class="form-text">
+                        Escribe tu dirección.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo Dirección es obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subscrito" class="form-label">
+                        <strong>Con suscripcion</strong>
+                    </label>
+                    <input type="checkbox" id="subscrito" name="subscrito">
+                    <div id="subscritoHelp" class="form-text">
+                        Deseo subscribirme con un aporte de $1.500 mensuales y obtener un 5% de descuento en mis
+                        compras.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="foto" class="form-label">
+                        <strong>Foto de perfil</strong>
+                    </label>
+                    <input type="file" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp">
+                    <div id="fotoHelp" class="form-text">
+                        Seleccione una foto de perfil.
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <img class="registro_foto" src="img/predeterminado.jfif" alt="" style="margin-bottom: 30px;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">
+                        <strong>Contraseña</strong>
+                    </label>
+                    <input type="password" required placeholder="Escribe aquí tu contraseña" class="form-control"
+                        id="password" name="password" aria-describedby="passwordHelp">
+                    <div id="passwordHelp" class="form-text">
+                        La contraseña debe tener un número, un símbolo, letras mayúsculas y minúsculas, y tener al menos
+                        8 caracteres.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo password es obligatorio
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password2" class="form-label">
+                        <Strong>Repetir contraseña</Strong>
+                    </label>
+                    <input type="password" required placeholder="Repite aquí tu contraseña" class="form-control"
+                        id="password2" name="password2" aria-describedby="password2Help">
+                    <div id="password2Help" class="form-text">
+                        La contraseña debe ser igual a la de arriba.
+                    </div>
+                    <div class="invalid-feedback">
+                        El campo Repetir Contraseña es obligatorio
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botonera -->
+            <div class="col-12 text-center">
+               <a href="ingresar.html"><button type="button" class="btn btn-md custom-btn">Registrarme</button></a> 
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- 2. Script de JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 3. Script de JQuery Validate (usa el Script de JQuery anterior) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 4. Mi Script de Validadores (usa el Script de JQuery y de JQuery Validate anteriores) -->
+    <script src="js/validarRegistro.js" type="text/javascript"></script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Función para cargar dinámicamente el footer desde footer.html
+        function includeFooter() {
+            // Crear un objeto XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            // Definir qué hacer cuando el contenido de footer.html se cargue correctamente
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Insertar el contenido del footer en el placeholder
+                    document.getElementById("footer-placeholder").innerHTML = this.responseText;
+                }
+            };
+
+            // Cargar el contenido de footer.html
+            xhttp.open("GET", "footer.html", true);
+            xhttp.send();
+        }
+
+        // Llamar a la función para cargar el footer
+        includeFooter();
+    </script>
+
+</body>
+
+</html>

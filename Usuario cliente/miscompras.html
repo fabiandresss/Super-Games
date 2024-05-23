@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/faviconsg.png">
+    <title>Mis compras - Super Games</title>
+    <link rel="icon" href="img/faviconsg.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <img id="logo-tienda" src="img/faviconsg.png" alt="">
+                <a class="navbar-brand" href="index.html">Super Games Chile</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="misdatos.html">Mis datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="miscompras.html">Mis compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Usuario anonimo/ingresar.html">Cerrar Sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="carrito.html">
+                                <i class="bi bi-cart-fill"></i>
+                            </a>
+                        </li>
+
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="titulo_compras"><strong>Mis compras anteriores</strong></h1>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nro boleta</th>
+                        <th>Fecha venta</th>
+                        <th>Fecha despacho</th>
+                        <th>Fecha entrega</th>
+                        <th>Monto total</th>
+                        <th>Estado actual</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1134</td>
+                        <td>21/04/24</td>
+                        <td>22/04/24</td>
+                        <td>22/04/24</td>
+                        <td>$100.000</td>
+                        <td>Entregado</td>
+                        <td><a href="detalle.html"><button type="button" class="btn btn-sm custom-btn">Ver
+                                    detalle</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>1678</td>
+                        <td>13/03/24</td>
+                        <td>14/03/24</td>
+                        <td>13/03/24</td>
+                        <td>$23.990</td>
+                        <td>Entregado</td>
+                        <td><a href="detalle.html"><button type="button" class="btn btn-sm custom-btn">Ver
+                                    detalle</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>1789</td>
+                        <td>12/09/23</td>
+                        <td>13/09/23</td>
+                        <td>13/09/23</td>
+                        <td>$87.449</td>
+                        <td>Entregado</td>
+                        <td><a href="detalle.html"><button type="button" class="btn btn-sm custom-btn">Ver
+                                    detalle</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>1566</td>
+                        <td>22/06/23</td>
+                        <td>23/06/23</td>
+                        <td>23/06/23</td>
+                        <td>$145.990</td>
+                        <td>Entregado</td>
+                        <td><a href="detalle.html"><button type="button" class="btn btn-sm custom-btn">Ver
+                                    detalle</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>

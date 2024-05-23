@@ -1,0 +1,259 @@
+#logo-tienda {
+    width: 50px;
+    margin-right: 10px;
+
+}
+
+.d-flex {
+    margin-left: 398px;
+}
+
+.navbar-nav .nav-link {
+    white-space: nowrap;
+  }
+  
+
+.navbar-brand {
+    font-family: Josefin Sans;
+}
+
+.nav-item {
+    font-family: Josefin Sans;
+}
+
+.container-fluid {
+    margin-left: 1px;
+}
+
+#registrarme_titulo {
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.container-registro {
+    margin-top: 70px;
+}
+
+.d-block w-100 {
+    width: 1px;
+    border-style: inset;
+}
+
+.thumbnail-product {
+    height: 150px !important;
+    max-width: 120px !important;
+    margin-top: 10px !important;
+}
+
+.card {
+    margin-top: 10px;
+}
+
+.sale-real-price {
+    text-decoration: line-through;
+}
+
+.sale-offer-price {
+    color: rgb(35, 121, 35);
+}
+
+.ficha_foto {
+    margin-left: 50px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.cuadro_login {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.boton_ingresar {
+    width: 100%;
+    max-width: 200px;
+    /* Ajusta el ancho máximo del botón */
+    margin-top: 20px;
+    /* Espacio superior para separar el botón del contenido superior */
+    margin-left: 24%;
+}
+
+/* Establecer un margen para todas las cartas */
+.card-nosotros {
+    margin-bottom: 20px;
+}
+
+/* Establecer un tamaño más pequeño para todas las cartas */
+.card-nosotros {
+    width: 100%;
+}
+
+.producto-imagen {
+    max-width: 110px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+.ficha_foto2 {
+    height: 280px;
+    width: 250px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.ficha_foto_3 {
+    height: 330px;
+    width: 250px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.ficha_foto_4 {
+    height: 270px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.ficha_agotado {
+    color: rgb(206, 22, 22);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    margin-top: 15px;
+    margin-left: 30px;
+
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.botones-ficha {
+    margin-top: 10px;
+}
+
+.custom-btn {
+    background-color: #09ff00;
+    /* Color de fondo */
+    color: #000000;
+    /* Color del texto */
+    border-color: #09ff00;
+    /* Color del borde */
+    margin-bottom: 15px;
+}
+
+.custom-btn:hover {
+    background-color: #1faf1a;
+    /* Color de fondo al pasar el ratón */
+    border-color: #1faf1a;
+    /* Color del borde al pasar el ratón */
+    color: #ffffff;
+}
+
+
+.img-ficha-td {
+    text-align: center;
+}
+
+.texto-ficha-td {
+    text-align: center;
+}
+
+.container-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: -105px;
+}
+
+.table_ficha {
+    margin-top: 230px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.ficha_titulo {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer_text {
+    text-decoration: none;
+    color: black;
+}
+
+.cuadro_login label {
+    text-align: center;
+    width: 100%;
+    margin-left: -150px;
+    margin-right: -20px;
+}
+
+.recuperar_contrasena_link {
+    color: black;
+}
+
+.nosotros {
+    margin-top: 90px;
+}
+
+.container_boton {
+    margin-right: 0px;
+}
+
+.footer_text a {
+    color: black !important;
+}
+
+#texto-crear-cuenta {
+    color: black;
+    margin-bottom: 100px;
+    text-decoration: none;
+}
+
+#texto-crear-cuenta:hover {
+    text-decoration: underline;
+    color: #249620 /* Cambia el color a tu preferencia */
+  }
+
+#olvidaste-contrasena {
+  text-decoration: none;
+  color: black;
+}
+
+#olvidaste-contrasena:hover {
+    text-decoration: underline;
+    color: #249620/* Cambia el color a tu preferencia */
+}
+
+.error {
+    color: red;
+    font-weight: bolder;
+}

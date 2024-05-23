@@ -1,0 +1,37 @@
+#btn-generar-contrasena {
+    background-color: #09ff00;
+    /* Color de fondo */
+    color: #ffffff;
+    /* Color del texto */
+    border-color: #09ff00;
+    /* Color del borde */
+}
+
+#btn-generar-contrasena:hover {
+    background-color: #1faf1a;
+    /* Color de fondo al pasar el ratón */
+    border-color: #1faf1a;
+    /* Color del borde al pasar el ratón */
+    color: #ffffff;
+}
+
+#btn-generar-contrasena {
+    margin-top: 10px;
+}
+
+.botones-usuarios {
+    background-color: #09ff00;
+    /* Color de fondo */
+    color: #ffffff;
+    /* Color del texto */
+    border-color: #09ff00;
+    /* Color del borde */
+}
+
+.botones-usuarios:hover {
+    background-color: #1faf1a;
+    /* Color de fondo al pasar el ratón */
+    border-color: #1faf1a;
+    /* Color del borde al pasar el ratón */
+    color: #ffffff;
+}

@@ -1,0 +1,10 @@
+
+.btn.active {
+    background-color: #1faf1a; /* Color de fondo azul cuando el botón está activo */
+    color: #ffffff; /* Color de texto blanco cuando el botón está activo */
+}
+
+.btn.other-color {
+    background-color: #6c757d; /* Cambia a otro color cuando no está activo */
+    color: #fff; /* Color de texto blanco cuando no está activo */
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminos y Condiciones - SuperGames</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="menu"></div>
+    <div id="navbar"></div>
+    <script src="menu_superior.html"></script>
+    <div class="container">
+        <h1 class="mt-5 mb-4 text-center">Términos y Condiciones</h1>
+
+        <h2>1. Política de Devoluciones</h2>
+        <p>En SuperGames, aceptamos devoluciones dentro de los primeros 30 días después de la compra, siempre que el
+            producto esté en su condición original y no haya sido abierto.</p>
+
+        <h2>2. Envíos</h2>
+        <p>Los envíos se realizan dentro de las 48 horas siguientes a la confirmación del pago. Los tiempos de envío
+            pueden variar según la ubicación del cliente.</p>
+
+        <h2>3. Métodos de Pago</h2>
+        <p>Aceptamos pagos con tarjeta de crédito, transferencia bancaria y PayPal. Todos los pagos se realizan de
+            forma segura a través de nuestra plataforma de pago en línea.</p>
+
+        <h2>4. Privacidad y Seguridad</h2>
+        <p>En SuperGames, nos comprometemos a proteger la privacidad y seguridad de nuestros clientes. Todos los datos
+            personales proporcionados se mantienen confidenciales y no se comparten con terceros sin consentimiento
+            previo.</p>
+
+        <h2>5. Atención al Cliente</h2>
+        <p>Nuestro equipo de atención al cliente está disponible las 24 horas del día, los 7 días de la semana, para
+            ayudarte con cualquier pregunta, inquietud o problema que puedas tener. No dudes en contactarnos por correo
+            electrónico o a través de nuestras redes sociales.</p>
+
+        <h2>6. Precios y Promociones</h2>
+        <p>Los precios de nuestros productos pueden variar según la disponibilidad y la demanda del mercado. También
+            ofrecemos promociones especiales y descuentos periódicos. Mantente informado visitando nuestro sitio web y
+            siguiéndonos en redes sociales.</p>
+
+        <h2>7. Propiedad Intelectual</h2>
+        <p>Todos los derechos de propiedad intelectual relacionados con los productos y contenidos de SuperGames son
+            propiedad exclusiva de nuestra empresa. Queda prohibida la reproducción, distribución o uso no autorizado
+            de cualquier material sin consentimiento previo.</p>
+
+        <h2>8. Legislación Aplicable</h2>
+        <p>Estos términos y condiciones se rigen por las leyes de [país], y cualquier disputa relacionada con ellos se
+            resolverá exclusivamente en los tribunales de [ciudad/país].</p>
+    </div>
+
+
+        
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <div id="footer-placeholder"></div>
+
+        <script>
+            // Función para cargar dinámicamente el footer desde footer.html
+            function includeFooter() {
+                // Crear un objeto XMLHttpRequest
+                var xhttp = new XMLHttpRequest();
+        
+                // Definir qué hacer cuando el contenido de footer.html se cargue correctamente
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Insertar el contenido del footer en el placeholder
+                        document.getElementById("footer-placeholder").innerHTML = this.responseText;
+                    }
+                };
+        
+                // Cargar el contenido de footer.html
+                xhttp.open("GET", "footer.html", true);
+                xhttp.send();
+            }
+        
+            // Llamar a la función para cargar el footer
+            includeFooter();
+        </script>
+        
+</body>
+</body>
+
+</html>

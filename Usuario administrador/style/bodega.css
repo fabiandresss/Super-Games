@@ -1,0 +1,7 @@
+/* Le agregamos margenes top y bottom al
+ h1 ""Productos en la bodega, para que no este pegado a los
+ botones y a la tabla*/
+#titulo-productos-bodega {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
