@@ -43,13 +43,13 @@
             <div class="col-md-6">
                 <img src="img/faviconsg.png" alt="Logo" class="img-fluid logo">
                 <h2 class="text-center mb-4">Ingresar</h2>
-                <form id="formulario-ingreso">
+                <form id="formulario-ingreso" novalidate method="post">
 
                     <!-- Formulario email -->
                     <div class="mb-3">
-                        <label for="email" class="form-label">
+                        <label for="correo" class="form-label">
                             Correo</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp" required>
                     </div>
 
                     <!-- Formulario contraseña -->
@@ -57,7 +57,7 @@
                         <label for="password" class="form-label">
                             Contraseña
                         </label>
-                        <input type="password" class="form-control" id="password" required
+                        <input type="password" class="form-control" id="password" name="password" required
                             aria-describedby="passwordHelp" required>
                     </div>
 
@@ -73,14 +73,14 @@
                         <div class="col text-center">
 
                             <!-- Botón ingresar como cliente -->
-                            <a href="/Usuario cliente/index.html">
-                                <button type="button" class="btn btn-md custom-btn">
+                            
+                                <button type="submit" class="btn btn-md custom-btn">
                                     Iniciar como cliente
-                                </button></a>
+                                </button>
 
                             <!-- Botón ingresar como administrador -->
-                            <a href="/Usuario administrador/index.html">
-                                <button type="button" class="btn btn-md custom-btn">Iniciar como admin</button></a>
+    
+                                <button type="submit" class="btn btn-md custom-btn">Iniciar como admin</button>
                         </div>
                     </div>
 

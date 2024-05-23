@@ -31,7 +31,7 @@
         </h1>
 
         <!-- Formulario de registro de cliente -->
-        <form id="formulario-registro" class="row g-3 needs-validation" novalidate>
+        <form id="formulario-registro" class="g-3" novalidate method="post">
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="rut" class="form-label">
@@ -158,7 +158,9 @@
 
             <!-- Botonera -->
             <div class="col-12 text-center">
-               <a href="ingresar.html"><button type="button" class="btn btn-md custom-btn">Registrarme</button></a> 
+               <button type="submit" class="btn btn-md custom-btn">Registrarme</button>
+               &nbsp;&nbsp;
+               <button type="reset" class="btn btn-md custom-btn">Limpiar</button>
             </div>
         </form>
     </div>

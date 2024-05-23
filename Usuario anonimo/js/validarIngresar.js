@@ -14,7 +14,7 @@ $(document).ready(function () {
     // Validar formulario con jquery
     $("#formulario-ingreso").validate({
         rules: {
-            email: {
+            correo: {
                 required: true,
                 email: true, // Esta regla verifica si es un correo electrónico válido
                 emailCompleto: true // Aquí aplicamos tu método personalizado para verificar el formato del correo
@@ -27,7 +27,7 @@ $(document).ready(function () {
             },
         },
         messages: {
-            email: {
+            correo: {
                 required: "El correo es requerido",
                 email: "El correo debe ser válido", // Este mensaje se muestra si el formato del correo es inválido según la regla `email`
                 emailCompleto: "El correo debe ser válido" // Este mensaje se muestra si el correo no pasa la validación personalizada
