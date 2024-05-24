@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maatenedor usuarios - Super Games</title>
+    <title>Mantenedor usuarios - Super Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
@@ -17,6 +17,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/usuario.css">
+
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         </h1>
 
         <!-- Formulario de registro de cliente -->
-        <form class="row g-3 needs-validation" novalidate>
+        <form id="formulario-usuarios" class="row g-3" novalidate>
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <!-- Campos del formulario -->
@@ -38,10 +39,10 @@
 
                         <!-- Campo ID -->
                         <div class="mb-3">
-                            <label for="rut" class="form-label">
+                            <label for="labelId" class="form-label" name="labelId" id="labelId">
                                 <strong>ID</strong>
                             </label>
-                            <input required placeholder="" type="text" class="form-control" id="rut" name="rut"
+                            <input required placeholder="" type="text" class="form-control" id="labelId" name="labelId"
                                 aria-describedby="rutHelp">
 
                             <!-- Campo Cliente/Administrador -->
@@ -69,7 +70,7 @@
 
                         <!-- Campo Rut -->
                         <div class="mb-3">
-                            <label for="rut" class="form-label">
+                            <label for="rut" class="form-label" name="rut" id="rut">
                                 <strong>Rut</strong>
                             </label>
                             <input required placeholder="Ej: 11123123-K" type="text" class="form-control" id="rut"
@@ -160,9 +161,10 @@
                                 <strong>Contraseña</strong>
                             </label>
                             <input type="password" required placeholder="Escribe aquí tu contraseña"
-                                class="form-control" id="password" name="password" aria-describedby="passwordHelp">
+                                class="form-control" id="generar-contraseña" name="password" aria-describedby="passwordHelp">
                             <div id="passwordHelp" class="form-text">
-                                <button id="btn-generar-contrasena" class="btn btn-sm btn-custom-btn">Generar
+                                <button type="button" id="btn-generar-contrasena"
+                                    class="btn btn-sm btn-custom-btn">Generar
                                     contraseña</button>
                             </div>
                             <div class="invalid-feedback">
@@ -181,10 +183,9 @@
                 <!-- Botonera -->
                 <div class="row">
                     <div class="col text-center">
-                        <button id="btn-generar-contrasena" type="button"
-                            class="btn btn-sm custom-btn">Guardar</button></a>
-                        <button id="btn-generar-contrasena" type="buttom" class="btn btn-sm custom-btn">Nuevo</button>
-                        <button id="btn-generar-contrasena" type="buttom"
+                        <button id="btn-generar-contrasena" type="submit" class="btn btn-sm custom-btn">Guardar</button>
+                        <button id="btn-generar-contrasena" type="submit" class="btn btn-sm custom-btn">Nuevo</button>
+                        <button id="btn-generar-contrasena" type="submit"
                             class="btn btn-sm custom-btn">Eliminar</button>
                     </div>
                 </div>
@@ -277,6 +278,22 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="js/mantenedorUsuarios.js"></script>
+        <!-- 2. Script de JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- 3. Script de JQuery Validate (usa el Script de JQuery anterior) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+            integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_es.min.js"></script>
+        <!-- 4. Mi Script de Validadores (usa el Script de JQuery y de JQuery Validate anteriores) -->
+        <script src="js/mantenedorUsuarios.js" type="text/javascript"></script>
     </body>
 
     </html>
@@ -313,6 +330,8 @@
         // Llamar a la función para cargar el footer
         includeFooter();
     </script>
+
+
 
 </body>
 
