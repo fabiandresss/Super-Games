@@ -1,0 +1,39 @@
+.ventana-emergente {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde el lado derecho */
+    background-color: #6e2828;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    max-width: 300px; /* Ancho máximo de la ventana emergente */
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #ff1900; /* Cambia el color al pasar el cursor */
+}
+
+#h2-oferta-api {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#text-oferta-api {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
