@@ -18,7 +18,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <script src="js/productos.js"></script>
 </head>
 
 <body>
@@ -32,7 +31,7 @@
         </h1>
 
         <!-- Formulario de registro de cliente -->
-        <form class="row g-3 needs-validation" novalidate>
+        <form id="formulario-mantenedor-productos" class="row g-3" novalidate>
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <!-- Campos del formulario -->
@@ -40,18 +39,18 @@
 
                         <!-- Campo ID -->
                         <div class="mb-3">
-                            <label for="rut" class="form-label">
+                            <label for="labelId" class="form-label" id="labelId" name="labelId">
                                 <strong>ID</strong>
                             </label>
-                            <input required placeholder="" type="text" class="form-control" id="rut" name="rut"
-                                aria-describedby="rutHelp">
+                            <input required placeholder="" type="text" class="form-control" id="labelId" name="labelId"
+                                aria-describedby="labelIdHelp">
 
                             <!-- Campo Categoria -->
                             <div class="mb-2 mt-3">
-                                <label for="Categoria" class="form-label">
+                                <label for="categoria" class="form-label" id="categoria" name="categoria">
                                     <strong>Categoria</strong>
-                                    <select class="form-select" aria-label="Categorías de Videojuegos">
-                                        <option selected>Selecciona una categoría...</option>
+                                    <select class="form-select" aria-label="Categorías de Videojuegos" name="categoria" id="categoria">
+                                        <option selected value="">Selecciona una categoría...</option>
                                         <option value="1">Aventura</option>
                                         <option value="2">Shooter</option>
                                         <option value="3">RPG</option>
@@ -62,7 +61,7 @@
 
                             <!-- Campo Nombre -->
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">
+                                <label for="nombre" class="form-label" id="nombre" name="nombre">
                                     <strong>Nombre</strong>
                                 </label>
                                 <input required placeholder="" type="text" class="form-control" id="nombre"
@@ -76,7 +75,7 @@
 
                             <!-- Campo descripcion -->
                             <div class="mb-3">
-                                <label for="descripcion" class="form-label">
+                                <label for="descripcion" class="form-label" id="descripcion" name="descripcion">
                                     <strong>Descripción</strong>
                                 </label>
                                 <textarea required placeholder="" class="form-control" rows="3" id="descripcion"
@@ -84,13 +83,13 @@
                                 <div id="descripcionHelp" class="form-text">
                                 </div>
                                 <div class="invalid-feedback">
-                                    El campo Descripcion es obligatorio
+                                    El campo descripcion es obligatorio
                                 </div>
                             </div>
 
                             <!-- Campo Precio -->
                             <div class="mb-3">
-                                <label for="precio" class="form-label">
+                                <label for="precio" class="form-label" id="precio" name="precio">
                                     <strong>Precio</strong>
                                 </label>
                                 <input required placeholder="$24.990" type="text" class="form-control" id="precio"
@@ -104,7 +103,7 @@
 
                             <!-- Campo descuento suscripcion -->
                             <div class="mb-3">
-                                <label for="suscripcion" class="form-label">
+                                <label for="suscripcion" class="form-label" id="suscripcion" name="suscripcion">
                                     <strong>Descuento suscriptor</strong>
                                 </label>
                                 <input required placeholder="5%" type="text" class="form-control" id="suscripcion"
@@ -117,7 +116,7 @@
 
                             <!-- Campo descuento oferta -->
                             <div class="mb-3">
-                                <label for="oferta" class="form-label">
+                                <label for="oferta" class="form-label" id="oferta" name="oferta">
                                     <strong>Descuento por oferta</strong>
                                 </label>
                                 <input required placeholder="10%" type="text" class="form-control" id="oferta"
@@ -140,7 +139,7 @@
                         <div class="row">
                             <div class="col text-center">
                                 <a href="ingresar.html">
-                                    <button type="button" class="btn btn-sm btn-primary">Guardar</button></a>
+                                    <button type="submit" class="btn btn-sm btn-primary">Guardar</button></a>
                                 <button type="reset" class="btn btn-sm btn-primary">Nuevo</button>
                                 <button type="reset" class="btn btn-sm btn-primary">Eliminar</button>
                             </div>
@@ -232,9 +231,24 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+     <!-- 2. Script de JQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <!-- 3. Script de JQuery Validate (usa el Script de JQuery anterior) -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+     integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <!-- 4. Mi Script de Validadores (usa el Script de JQuery y de JQuery Validate anteriores) -->
+ <script src="js/productos.js" type="text/javascript"></script>
+
 
     <div id="footer-placeholder"></div>
 
