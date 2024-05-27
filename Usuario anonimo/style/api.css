@@ -1,14 +1,33 @@
 .ventana-emergente {
     position: fixed;
-    bottom: 20px; /* Distancia desde la parte inferior */
-    right: 20px; /* Distancia desde el lado derecho */
-    background-color: #6e2828;
+    bottom: 20px;
+    /* Distancia desde la parte inferior */
+    right: 20px;
+    /* Distancia desde el lado derecho */
+    background-color: #285018;
     padding: 20px;
-    border: 2px solid #000000;
+    border: 2px solid #285018;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 9999;
-    max-width: 300px; /* Ancho máximo de la ventana emergente */
+    max-width: 300px;
+    /* Ancho máximo de la ventana emergente */
+    cursor: pointer;
+    animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Tamaño normal */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Tamaño aumentado */
+    }
 }
 
 .cerrar {
@@ -21,7 +40,8 @@
 }
 
 .cerrar:hover {
-    color: #ff1900; /* Cambia el color al pasar el cursor */
+    color: #ff1900;
+    /* Cambia el color al pasar el cursor */
 }
 
 #h2-oferta-api {
@@ -37,3 +57,6 @@
     line-height: 1.5;
 }
 
+#text-oferta-api:hover {
+    text-decoration: underline;
+}
