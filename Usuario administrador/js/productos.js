@@ -56,7 +56,7 @@ $(document).ready(function () {
     messages: {
       labelId: {
         required: "Por favor, ingresa un ID para el producto.",
-        labelId: "El ID debe conetener 4 letras seguido de 4 números"
+        labelId: "El ID debe contener 4 letras seguido de 4 números"
       },
       categoria: {
         required: "Por favor, selecciona una categoría."

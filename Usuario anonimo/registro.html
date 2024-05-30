@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/faviconsg.png">
-    <title>Mis Datos - Super Games</title>
+    <title>Registrarme - Super Games</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
         integrity="sha384-gibbZQgXFjOHJV8Vf6X0jPWfR0VcLy0zN6bjq0oeU9MCQ86kIQBhf8Wh0kZ5MIth" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
@@ -25,143 +25,152 @@
     <div id="navbar"></div>
     <script src="menu_superior.html"></script>
 
-    <div class="container">
-        <h1 class="text-center mt-5 mb-4">
+    <div class="container-registro">
+        <h1 id="registrarme_titulo">
             <strong>Registrarme</strong>
         </h1>
 
         <!-- Formulario de registro de cliente -->
-        <form id="formulario-registro" class="g-3" novalidate method="post">
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="rut" class="form-label">
-                        <strong>Rut</strong>
-                    </label>
-                    <input required placeholder="Ej: 11123123-K" type="text" class="form-control" id="rut" name="rut"
-                        aria-describedby="rutHelp">
-                    <div id="rutHelp" class="form-text">
-                        Escribe el RUT sin puntos y con guión.
+        <form id="formulario-registro" class="row g-3" novalidate>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <!-- Campos del formulario -->
+                    <div class="col-sm-12 col-md-4">
+
+                        <!-- Campo RUT -->
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">
+                                <strong>Rut</strong>
+                            </label>
+                            <input required placeholder="Ej: 11123123-K" type="text" class="form-control" id="rut"
+                                name="rut" aria-describedby="rutHelp">
+                            <div id="rutHelp" class="form-text">
+                                Escribe el RUT sin puntos y con guión.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo RUT es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Nombre -->
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">
+                                <strong>Nombre</strong>
+                            </label>
+                            <input required placeholder="Ej: Juan" type="text" class="form-control" id="nombre"
+                                name="nombre" aria-describedby="nombreHelp">
+                            <div id="nombreHelp" class="form-text">
+                                Escribe tu nombre.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Nombre es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Apellido -->
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">
+                                <strong>Apellido</strong>
+                            </label>
+                            <input required placeholder="Ej: González" type="text" class="form-control" id="apellido"
+                                name="apellido" aria-describedby="apellidoHelp">
+                            <div id="apellidoHelp" class="form-text">
+                                Escribe tu apellido.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Apellido es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Correo -->
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">
+                                <strong>Correo</strong>
+                            </label>
+                            <input required placeholder="Ej: jgonzalez@gmail.com" type="email" class="form-control"
+                                id="correo" name="correo" aria-describedby="correoHelp">
+                            <div id="correoHelp" class="form-text">
+                                Escribe tu correo.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Correo es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Correo -->
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">
+                                <strong>Dirección</strong>
+                            </label>
+                            <textarea required placeholder="Ej: Calle San Pedro 425, La Florida" class="form-control"
+                                rows="3" id="direccion" name="direccion" aria-describedby="direccionHelp"></textarea>
+                            <div id="direccionHelp" class="form-text">
+                                Escribe tu dirección.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Dirección es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Suscripción -->
+                        <div class="mb-3">
+                            <label for="subscrito" class="form-label">
+                                <strong>Con suscripción</strong>
+                            </label>
+                            <input type="checkbox" id="subscrito" name="subscrito">
+                            <div id="subscritoHelp" class="form-text">
+                                Deseo subscribirme con un aporte de $1.500 mensuales y obtener un 5% de descuento en mis
+                                compras.
+                            </div>
+                        </div>
+
+                        <!-- Campo Contraseña -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
+                                <strong>Contraseña</strong>
+                            </label>
+                            <input type="password" required placeholder="Escribe aquí tu contraseña"
+                                class="form-control" id="password" name="password" aria-describedby="passwordHelp">
+                            <div id="passwordHelp" class="form-text">
+                                La contraseña debe tener un número, un símbolo,
+                                letras mayúsculas y minúsculas, y además debe
+                                tener al menos 8 caracteres.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo password es obligatorio
+                            </div>
+                        </div>
+
+                        <!-- Campo Repetir Contraseña -->
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">
+                                <Strong>Repetir contraseña</Strong>
+                            </label>
+                            <input type="password" required placeholder="Repite aquí tu contraseña" class="form-control"
+                                id="password2" name="password2" aria-describedby="password2Help">
+                            <div id="password2Help" class="form-text">
+                                La contraseña debe ser igual a la de arriba.
+                            </div>
+                            <div class="invalid-feedback">
+                                El campo Repetir Contraseña es obligatorio
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="invalid-feedback">
-                        El campo RUT es obligatorio
+                    <!-- Foto de perfil -->
+                    <div class="col-sm-12 col-md-4">
+                        <img class="registro_foto" src="img/predeterminado.jfif" alt="">
+                        <br><br>
+                        <input type="file" class="btn btn-ptimary">
                     </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">
-                        <strong>Nombre</strong>
-                    </label>
-                    <input required placeholder="Ej: Juan" type="text" class="form-control" id="nombre"
-                        name="nombre" aria-describedby="nombreHelp">
-                    <div id="nombreHelp" class="form-text" value = "">
-                        Escribe tu nombre.
-                    </div>
+                <!-- Botonera -->
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-md custom-btn">Registrarme</button>
+                    &nbsp;&nbsp;
+                    <button type="reset" class="btn btn-md custom-btn">Limpiar</button>
                 </div>
-
-                <div class="mb-3">
-                    <label for="apellido" class="form-label">
-                        <strong>Apellido</strong>
-                    </label>
-                    <input required placeholder="Ej: González" type="text" class="form-control"
-                        id="apellido" name="apellido" aria-describedby="apellidoHelp">
-                    <div id="apellidoHelp" class="form-text" value = "">
-                        Escribe tu apellido.
-                    </div>
-                    <div class="invalid-feedback">
-                        El campo Apellido es obligatorio
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="correo" class="form-label">
-                        <strong>Correo</strong>
-                    </label>
-                    <input required placeholder="Ej: jgonzalez@gmail.com" type="email" class="form-control" id="correo"
-                        name="correo" aria-describedby="correoHelp">
-                    <div id="correoHelp" class="form-text">
-                        Escribe tu correo.
-                    </div>
-                    <div class="invalid-feedback">
-                        El campo Correo es obligatorio
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="direccion" class="form-label">
-                        <strong>Dirección</strong>
-                    </label>
-                    <textarea required placeholder="Ej: Calle San Pedro 425, La Florida" class="form-control" rows="3"
-                        id="direccion" name="direccion" aria-describedby="direccionHelp"></textarea>
-                    <div id="direccionHelp" class="form-text">
-                        Escribe tu dirección.
-                    </div>
-                    <div class="invalid-feedback">
-                        El campo Dirección es obligatorio
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="subscrito" class="form-label">
-                        <strong>Con suscripcion</strong>
-                    </label>
-                    <input type="checkbox" id="subscrito" name="subscrito">
-                    <div id="subscritoHelp" class="form-text">
-                        Deseo subscribirme con un aporte de $1.500 mensuales y obtener un 5% de descuento en mis
-                        compras.
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="foto" class="form-label">
-                        <strong>Foto de perfil</strong>
-                    </label>
-                    <input type="file" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp">
-                    <div id="fotoHelp" class="form-text">
-                        Seleccione una foto de perfil.
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <img class="registro_foto" src="img/predeterminado.jfif" alt="" style="margin-bottom: 30px;">
-                </div>
-
-                <div class="mb-3">
-                    <label for="password" class="form-label">
-                        <strong>Contraseña</strong>
-                    </label>
-                    <input type="password" required placeholder="Escribe aquí tu contraseña" class="form-control"
-                        id="password" name="password" aria-describedby="passwordHelp">
-                    <div id="passwordHelp" class="form-text">
-                        La contraseña debe tener un número, un símbolo, letras mayúsculas y minúsculas, y tener al menos
-                        8 caracteres.
-                    </div>
-                    <div class="invalid-feedback">
-                        El campo password es obligatorio
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="password2" class="form-label">
-                        <Strong>Repetir contraseña</Strong>
-                    </label>
-                    <input type="password" required placeholder="Repite aquí tu contraseña" class="form-control"
-                        id="password2" name="password2" aria-describedby="password2Help">
-                    <div id="password2Help" class="form-text">
-                        La contraseña debe ser igual a la de arriba.
-                    </div>
-                    <div class="invalid-feedback">
-                        El campo Repetir Contraseña es obligatorio
-                    </div>
-                </div>
-            </div>
-
-            <!-- Botonera -->
-            <div class="col-12 text-center">
-               <button type="submit" class="btn btn-md custom-btn">Registrarme</button>
-               &nbsp;&nbsp;
-               <button type="reset" class="btn btn-md custom-btn">Limpiar</button>
-            </div>
         </form>
     </div>
 
