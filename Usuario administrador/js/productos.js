@@ -3,7 +3,7 @@ $(document).ready(function () {
   // Método de validación
   $.validator.addMethod("labelId", function (value, element) {
     return this.optional(element) || /^[a-zA-Z]{4}[0-9]{4}$/.test(value);
-  }, "El ID debe contener exactamente 4 letras seguidas de 4 números.");
+  }, );
 
   // Método de validación para solo números y puntos
   $.validator.addMethod("numYpuntos", function (value, element) {
@@ -24,7 +24,6 @@ $(document).ready(function () {
     rules: {
       labelId: {
         required: true,
-        labelId: true
       },
       categoria: {
         required: true
@@ -36,27 +35,29 @@ $(document).ready(function () {
       descripcion: {
         required: true,
         minlength: 15,
-        maxlenght: 100
+        maxlength: 200
       },
       precio: {
         required: true,
-        numYpuntos: true
+        number: true,
+        min: 0,
       },
       suscripcion: {
         required: true,
-        numYporcentaje: true,
-        contienePorcentaje: true
+        number: true,
+        min: 0,
+        max: 100,
       },
       oferta: {
         required: true,
-        numYporcentaje: true,
-        contienePorcentaje: true
+        number: true,
+        min: 0,
+        max: 100
       }
     },
     messages: {
       labelId: {
         required: "Por favor, ingresa un ID para el producto.",
-        labelId: "El ID debe contener 4 letras seguido de 4 números"
       },
       categoria: {
         required: "Por favor, selecciona una categoría."
@@ -67,8 +68,8 @@ $(document).ready(function () {
       },
       descripcion: {
         required: "Por favor, ingrese una descripción para el producto",
-        minlength: "Debe tener minimo 15 caracteres",
-        maxlenght: "Debe tener minimo 100 caracteres"
+        minlength: "Debe tener mínimo 15 caracteres",
+        maxlength: "Debe tener máximo 200 caracteres"
       },
       precio: {
         required: "Por favor, ingrese un precio para el producto",

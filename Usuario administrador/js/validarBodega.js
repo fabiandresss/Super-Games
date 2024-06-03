@@ -14,7 +14,9 @@ $(document).ready(function () {
             },
             cantidad:{
                 required: true,
-                soloNumeros: true
+                number: true,
+                min: 1
+             
             }
         },
 
